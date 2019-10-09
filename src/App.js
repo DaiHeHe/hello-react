@@ -1,7 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React ,{ Component } from 'react';
+import Hello from './Hello';
 
+/*
 function App() {
   return (
     <div className="App">
@@ -21,6 +21,31 @@ function App() {
       </header>
     </div>
   );
+}*/
+
+class App extends Component {
+    render() {
+      const user=123;
+
+      return (
+    
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-1 col-xs-offset-11">
+              <h1>Hello</h1>
+            </div>
+            <div>
+              <Hello age='111'  name='BeautifulGirl' user={user}/> This is hello Component
+            </div>
+            <div>
+              {true? "good" : "Bad"}
+            </div>
+          </div>  
+        </div>
+      );
+    }
 }
+
+
 
 export default App;
